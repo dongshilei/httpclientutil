@@ -22,8 +22,8 @@ public class TestVerifyCode {
 		String qq = "123456789";//qq号
 		String imgUrl = "http://qqxoo.com/include/vdimgvt.php?t="+Math.random(); //获取验证码图片地址
 		String verifyUrl = "http://qqxoo.com/include/vdcheck.php";
-		String saveCodePath = "C:/1.png";//保存验证码图片路径
-		
+		String saveCodePath = "D:/1.png";//保存验证码图片路径
+
 		Header[] headers = HttpHeader.custom().referer("http://qqxoo.com/main.html?qqid="+qq).build();//设置referer，是为了获取对应qq号的验证码，否则报错
 		HttpConfig config = HttpConfig.custom().headers(headers).context(HttpCookies.custom().getContext());//必须设置context，是为了携带cookie进行操作
 		
